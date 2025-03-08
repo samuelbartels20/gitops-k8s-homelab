@@ -21,56 +21,18 @@ cniConfig:
 
 nodes:
   - hostname: "control-plane-1"
-    ipAddress: "192.168.8.103"
+    ipAddress: "192.168.8.108"
     installDisk: "/dev/sda"
     machineSpec:
       secureboot: false
-    talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
+    talosImageURL: factory.talos.dev/installer/0f77ce8f08925501327318ab855b564261cfcb48b946e410330e0cc062292a79
     controlPlane: true
     networkInterfaces:
       - deviceSelector:
-          hardwareAddr: "bc:24:11:18:ea:f9"
+          hardwareAddr: "bc:24:11:59:68:d2"
         dhcp: false
         addresses:
-          - "192.168.8.103/24"
-        routes:
-          - network: "0.0.0.0/0"
-            gateway: "192.168.8.1"
-        mtu: 1500
-        vip:
-          ip: "192.168.8.200"
-  - hostname: "control-plane-2"
-    ipAddress: "192.168.8.105"
-    installDisk: "/dev/sda"
-    machineSpec:
-      secureboot: false
-    talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
-    controlPlane: true
-    networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "bc:24:11:bb:aa:1b"
-        dhcp: false
-        addresses:
-          - "192.168.8.105/24"
-        routes:
-          - network: "0.0.0.0/0"
-            gateway: "192.168.8.1"
-        mtu: 1500
-        vip:
-          ip: "192.168.8.200"
-  - hostname: "control-plane-3"
-    ipAddress: "192.168.8.104"
-    installDisk: "/dev/sda"
-    machineSpec:
-      secureboot: false
-    talosImageURL: factory.talos.dev/installer/376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
-    controlPlane: true
-    networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "bc:24:11:8c:5b:8f"
-        dhcp: false
-        addresses:
-          - "192.168.8.104/24"
+          - "192.168.8.108/24"
         routes:
           - network: "0.0.0.0/0"
             gateway: "192.168.8.1"
